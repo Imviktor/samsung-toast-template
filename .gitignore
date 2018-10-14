@@ -5,7 +5,17 @@
 *.ipr
 *.iws
 
+##
+cordoa-browser
+cordova-js
+cordova-plugin-toast
+cordova-sectv-orsay
+cordova-sectv-tizen
+cordova-tv-webos
+grunt-cordova-sectv
+
 ## Not index
 project/platforms/
 project/node_modules/
 project/plugins/
+project/package-lock.json
