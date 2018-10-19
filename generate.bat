@@ -37,7 +37,15 @@ cd cordova-js
 call cscript ../replace.vbs
 cd ..
 
-echo ================ Getting Started with TOAST!
+echo "================ Compile project"
+cd cordova-js
+call grunt compile:sectv-orsay compile:sectv-tizen compile:tv-webos
+cd ..
+
+cd cordova-plugin-toast
+call grunt compile:sectv-orsay compile:sectv-tizen compile:tv-webos
+cd ..
+
 set projectName=""
 set /p projectName="What's the root directory's name? (default is 'project') "
 
