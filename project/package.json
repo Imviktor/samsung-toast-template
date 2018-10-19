@@ -16,6 +16,7 @@
     "zip-dir": "^1.0.2"
   },
   "dependencies": {
+    "cordova-android": "^7.1.1",
     "cordova-browser": "^5.0.4",
     "cordova-plugin-device": "^2.0.2",
     "cordova-plugin-globalization": "^1.11.0",
@@ -32,7 +33,9 @@
       "cordova-plugin-toast": {}
     },
     "platforms": [
-      "browser"
+      "browser",
+      "android",
+      "ios"
     ]
   }
 }
