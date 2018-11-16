@@ -61,5 +61,5 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-cordova-sectv');
 
     // defaults
-    grunt.registerTask('default', ['jshint', 'clean', 'sectv-prepare', 'sectv-build']);
+    grunt.registerTask('default', ['jshint', 'clean', 'sectv-prepare:sectv-tizen', 'sectv-build:sectv-tizen']);
 };
