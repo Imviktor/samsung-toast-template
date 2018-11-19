@@ -28,6 +28,15 @@
     <plugin name="cordova-plugin-globalization" spec="^1.11.0" />
     <plugin name="cordova-plugin-toast" spec="../cordova-plugin-toast" />
     <engine name="ios" />
+    <platform name="sectv-orsay">
+        <multiapp>y</multiapp>
+    </platform>
+    <platform name="sectv-tizen">
+        <tizen:metadata key="http://samsung.com/tv/metadata/prelaunch.support" value="true" />
+    </platform>
+    <platform name="tv-webos">
+        {"appDescription": "This is an sample application"}
+    </platform>
     <engine name="browser" spec="^5.0.4" />
     <engine name="android" spec="^7.1.1" />
 </widget>

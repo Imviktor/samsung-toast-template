@@ -1,4 +1,4 @@
-
+const stream = require("main");
 
 var app = {
     initialize: function() {
@@ -11,6 +11,7 @@ var app = {
     // 'pause', 'resume', etc.
     onDeviceReady: function() {
         this.receivedEvent('deviceready');
+        stream.main();
     },
 
     // Update DOM on a Received Event

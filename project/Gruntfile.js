@@ -15,7 +15,8 @@ module.exports = function(grunt) {
                 platformRepos: '../cordova-sectv-orsay',
                 scripts: {
                     'cordova.js': '../cordova-js/pkg/cordova.sectv-orsay.js',
-                    'toast.js': '../cordova-plugin-toast/platform_www/sectv-orsay/toast.js'
+                    'toast.js': '../cordova-plugin-toast/platform_www/sectv-orsay/toast.js',
+                    'bundle.js': '/'
                 }
             },
             'sectv-tizen': {

@@ -31,6 +31,8 @@
     // If logging globals should be predefined (console, alert, etc.).
     "devel": false,
 
+    // ECMAScript 6
+    "esversion": 6,
 
     // ECMAScript 5
     // If ES5 syntax should be allowed.

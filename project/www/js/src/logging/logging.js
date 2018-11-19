@@ -1,7 +1,7 @@
 'use strict';
 const {createLogger, format, transports} = require('winston');
 const levelLength = 6;
-const classNameLenght = 40;
+const classNameLenght = 30;
 let classname;
 let logger;
 
@@ -15,10 +15,11 @@ let logger;
 let strFormat = (str, length, dir) => {
     let strDisplay = str;
     if (length > String(str).length) {
-        if (dir === "rtl")
+        if (dir === "rtl") {
             strDisplay = Array(length - String(str).length + 1).join(' ') + str;
-        else
+        } else {
             strDisplay = str + Array(length - String(str).length + 1).join(' ');
+        }
     }
     return strDisplay.substring(0, length);
 };
@@ -45,7 +46,8 @@ function Logger(className) {
             }),
             format.printf(info => `${info.timestamp} ${info.level} ${this.classname}: ${info.message}`)
         ),
-        transports: [new transports.Console()]
+        transports: [new transports.Console()],
+        handleExceptions: true
     });
 }
 
