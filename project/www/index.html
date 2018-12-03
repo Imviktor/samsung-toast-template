@@ -4,31 +4,19 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=1920">
         
-        <title>TV tuner test Application</title>
+        <title>VICPTV</title>
 
         <link rel="stylesheet" type="text/css" href="css/style.css" />
-        <script>
-            document.addEventListener("deviceready", onDeviceReady, false);
-            function onDeviceReady() {
-                main();
-            }
-        </script>
+
+
+        <script src="cordova.js"></script>
+        <script src="toast.js"></script>
+        <script src="js/lib/samsung.js"></script>
+        <script src="js/lib/head_min.js"></script>
+        <script src="js/loader.js"></script>
     </head>
 
     <body>
-        <script type="text/javascript" src="cordova.js"></script>
-        <!-- Add toast.js to use toast api -->
-        <script type="text/javascript" src="toast.js"></script>
-        <script type="text/javascript" src="js/bundle.js"> </script>
-        <script src="js/main.js"></script>
-        <video id="video"></video>
 
-        <div id="appInfo">
-            <h2>Use [KEY UP/DOWN] - change channels, [KEY 1] - show program list to console, [KEY 2] - show current channel information to console</h2>
-        </div>
-
-        <div id="logs">
-
-        </div>
     </body>
 </html>
