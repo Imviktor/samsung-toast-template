@@ -50,7 +50,6 @@ var app = {
             {LanguageConfig: "resources/language/languageConfig.js"},   
 
             function(){
-            SceneManager.start();
             // Checks the language of the TV set.
             navigator.globalization.getPreferredLanguage(
                 function (language) {

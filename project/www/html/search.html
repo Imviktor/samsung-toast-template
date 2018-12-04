@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="EN">
+<html lang="en">
 <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=1920">
@@ -14,22 +14,27 @@
     <script src="js/lib/samsung.js"></script>
     <script src="js/lib/head_min.js"></script>
     <script src="js/loader.js"></script>
-    <script src="js/lib/jquery-3.3.1.min.js"></script>
-    <script>
-        $(function(){
-            $("#header").load("html/header.html");
-        })
-    </script>
 </head>
 
 <body>
-<header id="header" class="header"></header>
+<header id="header" class="header">
+    <div class="row">
+        <div class="cell">
+            <div id="search_setion" class="section_text">SEARCH</div>
+            <div id="settings_section" class="section_text">SETTINGS</div>
+            <div id="tvguide_section" class="section_text">TV GUIDE</div>
+        </div>
+        <div class="cell">
+            <div id="time_section" class="section_text right">05/12/2018  15:46</div>
+        </div>
+    </div>
+</header>
 <nav class="body row">
     <div class="cell box">
         <div class="section_text_1"><b>MY TV</b></div>
         <div class="row outter">
             <div id="mytv_box" class="cell inner">
-
+                
             </div>
         </div>
     </div>
