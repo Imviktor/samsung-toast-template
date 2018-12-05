@@ -1,0 +1,65 @@
+.group {
+    width: 100%;
+    min-height: 110px;
+    overflow: hidden;
+    position: relative;
+}
+
+label {
+    position: absolute;
+    top: 2vw;
+    font-size: 1.5vw;
+    cursor: text;
+    transition: 0.25s ease;
+}
+
+input {
+    display: block;
+    width: 100%;
+    padding-top: 2.5vw;
+    border: none;
+    border-radius: 0;
+    color: white;
+    background: #333;
+    font-size: 1.5vw;
+    transition: 0.3s ease;
+}
+input:valid ~ label {
+    top: 0;
+    color: rgba(255, 255, 255, 0.5);
+}
+input:focus {
+    outline: none;
+}
+input:focus ~ label {
+    top: 0;
+    color: #f8f8f8;
+}
+input:focus ~ .bar:before {
+    transform: translateX(0);
+}
+
+.bar {
+    content: "";
+    width: 550px;
+    height: 0.15vw;
+    background: #f8f8f8;
+    transition: 0.3s ease;
+    position: relative;
+}
+.bar:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 120%;
+    background: #f8f8f8;
+    transform: translateX(-100%);
+}
+
+.search{
+    width: 25%;
+}
+
+.results{
+    width: 75%;
+}

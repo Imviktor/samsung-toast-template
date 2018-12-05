@@ -1,59 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="EN">
 <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=1920">
 
     <title>VICPTV</title>
 
-    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <link rel="stylesheet" href="../css/normalize.min.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/style.css"/>
+    <link rel="stylesheet" href="../css/search.css"/>
 
-
-    <script src="cordova.js"></script>
-    <script src="toast.js"></script>
-    <script src="js/lib/samsung.js"></script>
-    <script src="js/lib/head_min.js"></script>
-    <script src="js/loader.js"></script>
+    <script src="../cordova.js"></script>
+    <script src="../toast.js"></script>
+    <script src="../js/lib/samsung.js"></script>
+    <script src="../js/lib/head_min.js"></script>
+    <script src="../js/loader.js"></script>
+    <script src="../js/lib/jquery-3.3.1.min.js"></script>
 </head>
-
 <body>
 <header id="header" class="header">
-    <div class="row">
-        <div class="cell">
-            <div id="search_setion" class="section_text">SEARCH</div>
-            <div id="settings_section" class="section_text">SETTINGS</div>
-            <div id="tvguide_section" class="section_text">TV GUIDE</div>
-        </div>
-        <div class="cell">
-            <div id="time_section" class="section_text right">05/12/2018  15:46</div>
-        </div>
-    </div>
+    <ul style="float: left;">
+        <li id="home_section" class="section_text"><a href="../index.html">HOME</a></li>
+        <li id="search_setion" class="section_text"><a href="search.html">SEARCH</a></li>
+        <li id="settings_section" class="section_text"><a href="settings.html">SETTINGS</a></li>
+        <li id="tvguide_section" class="section_text"><a href="tvguide.html">TV GUIDE</a></li>
+    </ul>
+    <span id="time_section" class="section_text" style="float: right;">05/12/2018 15:46</span>
 </header>
-<nav class="body row">
-    <div class="cell box">
-        <div class="section_text_1"><b>MY TV</b></div>
-        <div class="row outter">
-            <div id="mytv_box" class="cell inner">
-                
-            </div>
+<section class="body">
+    <section class="search">
+        <div class="group">
+            <input type="text" id="search" required="required"/>
+            <label for="search">Search</label>
+            <div class="bar"></div>
         </div>
-    </div>
-    <div class="cell box">
-        <div class="section_text_1"><b>TV GUIDE</b></div>
-        <div class="row outter">
-            <div id="tvguide_box" class="cell inner">
+        <div>
+            <span class="section_text">HISTORY</span>
+        </div>
+    </section>
+    <section class="results">
 
-            </div>
-        </div>
-    </div>
-    <div class="cell box">
-        <div class="section_text_1"><b>ON DEMAND</b></div>
-        <div class="row outter">
-            <div id="vod_box" class="cell inner">
-
-            </div>
-        </div>
-    </div>
-</nav>
+    </section>
+</section>
 </body>
 </html>
