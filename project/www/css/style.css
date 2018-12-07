@@ -1,12 +1,21 @@
-* {
+*, *:before, *:after {
     box-sizing: border-box;
 }
 
+html {
+    height: 100%;
+    padding: 1%;
+}
+
 body {
+    margin: 0;
     background-color: #333;
     color: #f8f8f8;
     font-family: Comic Sans MS, cursive, sans-serif;
     font-size: 1vw;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 a {
@@ -14,7 +23,7 @@ a {
     color: #f8f8f8;
 }
 
-.header {
+.header_text {
     float: none;
     display: flex;
     justify-content: space-between;
@@ -26,10 +35,21 @@ ul.body {
     height: 100%;
 }
 
-section.body{
+main.body{
+    display: flex;
     padding: 0 55px;
-    width: 100%;
     height: 100%;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav_list{
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 .row {
@@ -98,8 +118,8 @@ section.body{
 .channel_logo {
     text-align: center;
     font-size: 1vmax;
-    margin: 5%;
-    padding: 5%;
+    margin: 6% 3%;
+    padding: 6% 3%;
 }
 
 .channel_info{
@@ -112,4 +132,39 @@ section.body{
 
 .channel_now {
     font-size: 0.7vmax;
+}
+
+
+
+.div_75{
+    width: 75%;
+    float: left;
+    margin: 5px 0;
+}
+
+.div_25{
+    width: 25%;
+    float: left;
+    margin: 5px 0;
+}
+
+.div_50{
+    width: 50%;
+    float: left;
+    margin: 5px 0;
+}
+
+.div_100{
+    width: 100%;
+}
+
+input[type=text], select, textarea, button{
+    width: 100%;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    resize: vertical;
+    background-color: #333;
+    color: #f8f8f8;
+    font-family: Comic Sans MS, cursive, sans-serif;
+    font-size: 1vw;
 }

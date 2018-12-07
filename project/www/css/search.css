@@ -1,42 +1,7 @@
 .group {
     width: 100%;
-    min-height: 110px;
     overflow: hidden;
     position: relative;
-}
-
-label {
-    position: absolute;
-    top: 2vw;
-    font-size: 1.5vw;
-    cursor: text;
-    transition: 0.25s ease;
-}
-
-input {
-    display: block;
-    width: 100%;
-    padding-top: 2.5vw;
-    border: none;
-    border-radius: 0;
-    color: white;
-    background: #333;
-    font-size: 1.5vw;
-    transition: 0.3s ease;
-}
-input:valid ~ label {
-    top: 0;
-    color: rgba(255, 255, 255, 0.5);
-}
-input:focus {
-    outline: none;
-}
-input:focus ~ label {
-    top: 0;
-    color: #f8f8f8;
-}
-input:focus ~ .bar:before {
-    transform: translateX(0);
 }
 
 .bar {
@@ -47,6 +12,7 @@ input:focus ~ .bar:before {
     transition: 0.3s ease;
     position: relative;
 }
+
 .bar:before {
     content: "";
     position: absolute;
@@ -56,10 +22,58 @@ input:focus ~ .bar:before {
     transform: translateX(-100%);
 }
 
-.search{
-    width: 25%;
+.search {
+    width: 22%;
+    height: 100%;
+    float: left;
+    margin: 1%;
 }
 
-.results{
+hr {
+    border: 0;
+    height: 0;
+    display: inline-block;
+    border-top: 5px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 5px solid rgba(255, 255, 255, 0.3);
+}
+
+.settings_list {
     width: 75%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    float: right;
+    list-style: none;
+    display: inline-block;
+}
+
+.history_record {
+    font-size: 1vmax;
+}
+
+.history_container {
+    padding: 10px;
+    margin: 5% 0;
+}
+
+.text_1 {
+    align-self: center;
+    font-size: 2vmax;
+}
+
+.history {
+    margin: 15% 0 0 0;
+    float: left;
+}
+
+.channel_row {
+    width: 17%;
+    list-style: none;
+    display: inline-block;
+    margin: 1%;
+}
+
+.logo_box {
+    width: 100%;
+    margin: 0 0 15px 0;
 }

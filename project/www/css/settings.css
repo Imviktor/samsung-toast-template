@@ -1,0 +1,29 @@
+.settings_options {
+    border: 2px solid #1b792c;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+}
+
+.settings_container {
+    border: 2px solid #269abc;
+}
+
+.settings_list {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.option{
+    font-size: 1.5vmax;
+}
+
+.hidden{
+    visibility: collapse;
+}
+
+.visible{
+    visibility: visible;
+}

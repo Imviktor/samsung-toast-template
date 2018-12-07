@@ -19,29 +19,97 @@
     <script src="../js/lib/jquery-3.3.1.min.js"></script>
 </head>
 <body>
-<header id="header" class="header">
-    <ul style="float: left;">
+<header class="header">
+    <ul>
         <li id="home_section" class="section_text"><a href="../index.html">HOME</a></li>
         <li id="search_setion" class="section_text"><a href="search.html">SEARCH</a></li>
         <li id="settings_section" class="section_text"><a href="settings.html">SETTINGS</a></li>
         <li id="tvguide_section" class="section_text"><a href="tvguide.html">TV GUIDE</a></li>
     </ul>
-    <span id="time_section" class="section_text" style="float: right;">05/12/2018 15:46</span>
+    <span id="time_section" class="section_text">05/12/2018 15:46</span>
 </header>
 <section class="body">
     <section class="search">
-        <div class="group">
-            <input type="text" id="search" required="required"/>
+        <div class="div_25">
+            <label for="category">Category</label>
+        </div>
+        <div class="div_75">
+            <select id="category">
+                <option>Spain</option>
+                <option>Latino</option>
+            </select>
+        </div>
+        <div class="div_25">
             <label for="search">Search</label>
-            <div class="bar"></div>
         </div>
-        <div>
-            <span class="section_text">HISTORY</span>
+        <div class="div_75">
+            <input type="text" id="search" required="required"/>
+        </div>
+        <div class="div_25"></div>
+        <div class="div_75">
+            <button type="submit">Search</button>
+        </div>
+        <div class="history">
+            <span class="text_1">HISTORY</span>
+            <div id="history_container" class="history_container">
+                <span class="history_record">search1</span><br>
+                <span class="history_record">search2</span><br>
+                <span class="history_record">search3</span><br>
+                <span class="history_record">search4</span><br>
+            </div>
         </div>
     </section>
-    <section class="results">
-
-    </section>
+    <ul class="results">
+        <li class="channel_row">
+            <div class="logo_box">
+                <span class="channel_logo">LOGO</span>
+            </div>
+            <span class="channel_title">Channel title</span><br>
+            <span class="channel_now">Now playing: Program 1...</span>
+        </li>
+        <li class="channel_row">
+            <div class="logo_box">
+                <span class="channel_logo">LOGO</span>
+            </div>
+            <span class="channel_title">Channel title</span><br>
+            <span class="channel_now">Now playing: Program 1...</span>
+        </li>
+        <li class="channel_row">
+            <div class="logo_box">
+                <span class="channel_logo">LOGO</span>
+            </div>
+            <span class="channel_title">Channel title</span><br>
+            <span class="channel_now">Now playing: Program 1...</span>
+        </li>
+        <li class="channel_row">
+            <div class="logo_box">
+                <span class="channel_logo">LOGO</span>
+            </div>
+            <span class="channel_title">Channel title</span><br>
+            <span class="channel_now">Now playing: Program 1...</span>
+        </li>
+        <li class="channel_row">
+            <div class="logo_box">
+                <span class="channel_logo">LOGO</span>
+            </div>
+            <span class="channel_title">Channel title</span><br>
+            <span class="channel_now">Now playing: Program 1...</span>
+        </li>
+        <li class="channel_row">
+            <div class="logo_box">
+                <span class="channel_logo">LOGO</span>
+            </div>
+            <span class="channel_title">Channel title</span><br>
+            <span class="channel_now">Now playing: Program 1...</span>
+        </li>
+        <li class="channel_row">
+            <div class="logo_box">
+                <span class="channel_logo">LOGO</span>
+            </div>
+            <span class="channel_title">Channel title</span><br>
+            <span class="channel_now">Now playing: Program 1...</span>
+        </li>
+    </ul>
 </section>
 </body>
 </html>

@@ -7,6 +7,7 @@
     <title>VICPTV</title>
 
     <link rel="stylesheet" type="text/css" href="../css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/settings.css"/>
 
     <script src="../cordova.js"></script>
     <script src="../toast.js"></script>
@@ -16,85 +17,86 @@
     <script src="../js/lib/jquery-3.3.1.min.js"></script>
 </head>
 <body>
-<header id="header" class="header">
-    <ul style="float: left;">
+<header class="header">
+    <ul>
         <li id="home_section" class="section_text"><a href="../index.html">HOME</a></li>
         <li id="search_setion" class="section_text"><a href="search.html">SEARCH</a></li>
         <li id="settings_section" class="section_text"><a href="settings.html">SETTINGS</a></li>
         <li id="tvguide_section" class="section_text"><a href="tvguide.html">TV GUIDE</a></li>
     </ul>
-    <span id="time_section" class="section_text" style="float: right;">05/12/2018 15:46</span>
+    <span id="time_section" class="section_text">05/12/2018 15:46</span>
 </header>
-<ul class="body">
-    <li class="box">
-        <div class="section_text_1"><b>MY TV</b></div>
-        <ul id="mytv_box" class="channel_column">
-            <li class="channel_row">
-                <div class="logo_box">
-                    <span class="channel_logo">LOGO</span>
-                </div>
-                <div class="channel_info">
-                    <span class="channel_title">Channel title</span>
-                    <span class="channel_now">Now playing: Program 1...</span>
-                </div>
-            </li>
-            <li class="channel_row">
-                <div class="logo_box">
-                    <span class="channel_logo">LOGO</span>
-                </div>
-                <div class="channel_info">
-                    <span class="channel_title">Channel title</span>
-                    <span class="channel_now">Now playing: Program 1...</span>
-                </div>
-            </li>
+<main class="body">
+    <section class="div_25 settings_options">
+        <ul class="top settings_list">
+            <li class="option" id="setting_language">General</li>
+            <li class="option" id="setting_sources">Fetch sources</li>
+            <li class="option" id="setting_favourite">Favourite channels</li>
+            <li class="option" id="setting_visibility">Category Visibility</li>
         </ul>
-    </li>
-    <li class="box">
-        <div class="section_text_1"><b>TV GUIDE</b></div>
-        <ul id="tvguide_box" class="channel_column">
-            <li class="channel_row">
-                <div class="logo_box">
-                    <span class="channel_logo">LOGO</span>
-                </div>
-                <div class="channel_info">
-                    <span class="channel_title">Channel title</span>
-                    <span class="channel_now">Now playing: Program 1...</span>
-                </div>
-            </li>
-            <li class="channel_row">
-                <div class="logo_box">
-                    <span class="channel_logo">LOGO</span>
-                </div>
-                <div class="channel_info">
-                    <span class="channel_title">Channel title</span>
-                    <span class="channel_now">Now playing: Program 1...</span>
-                </div>
-            </li>
+        <ul class="bottom settings_list">
+            <li class="option" id="setting_help">Help</li>
+            <li class="option" id="setting_support">Support</li>
         </ul>
-    </li>
-    <li class="box">
-        <div class="section_text_1"><b>ON DEMAND</b></div>
-        <ul id="vod_box" class="channel_column">
-            <li class="channel_row">
-                <div class="logo_box">
-                    <span class="channel_logo">LOGO</span>
-                </div>
-                <div class="channel_info">
-                    <span class="channel_title">Channel title</span>
-                    <span class="channel_now">Now playing: Program 1...</span>
-                </div>
+    </section>
+    <section class="div_75 settings_container">
+        <ul class="nav_list">
+            <li>
+                <section id="container_setting_language" class="setting-content visible">
+                    <span class="section_text_1 div_100">GENERAL</span>
+                    <div class="form">
+                        <label for="category">Language</label>
+                        <select id="category">
+                            <option>Spanish</option>
+                            <option>English</option>
+                        </select>
+                    </div>
+                </section>
+                <section id="container_setting_sources" class="setting-content hidden">
+                    <span class="section_text_1 div_100">SOURCES</span>
+                    <div class="form">
+                        <label for="source">Fetch sources (URL)</label>
+                        <input type="text" id="source" required="required"/>
+                        <button type="submit">Submit</button>
+                    </div>
+                </section>
+                <section id="container_setting_favourite" class="setting-content hidden">
+                    <span class="section_text_1 div_100">FAVOURITES</span>
+                    <div class="form">
+                    </div>
+                </section>
+                <section id="container_setting_visibility" class="setting-content hidden">
+                    <span class="section_text_1 div_100">CATEGORY VISIBILITY</span>
+                    <div class="form">
+                    </div>
+                </section>
+                <section id="container_setting_help" class="setting-content hidden">
+                    <span class="section_text_1">HELP</span>
+                    <div class="form">
+                    </div>
+                </section>
+                <section id="container_setting_support" class="setting-content hidden">
+                    <span class="section_text_1">SUPPORT</span>
+                    <div class="form">
+                    </div>
+                </section>
             </li>
-            <li class="channel_row">
-                <div class="logo_box">
-                    <span class="channel_logo">LOGO</span>
-                </div>
-                <div class="channel_info">
-                    <span class="channel_title">Channel title</span>
-                    <span class="channel_now">Now playing: Program 1...</span>
-                </div>
-            </li>
+            <li></li>
+            <li></li>
+            <li></li>
         </ul>
-    </li>
-</ul>
+    </section>
+</main>
+<script>
+    let aux_section = "container_setting_language";
+    $(function () {
+        $('li[id^=setting_]').click(function () {
+            let item = 'container_' + this.id;
+            $('#' + item).toggleClass("visible hidden");
+            $('#' + aux_section).toggleClass("visible hidden");
+            aux_section = item;
+        })
+    });
+</script>
 </body>
 </html>
