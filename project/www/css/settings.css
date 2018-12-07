@@ -21,9 +21,9 @@
 }
 
 .hidden{
-    visibility: collapse;
+    display: none;
 }
 
 .visible{
-    visibility: visible;
+    display: block;
 }

@@ -92,8 +92,8 @@
     $(function () {
         $('li[id^=setting_]').click(function () {
             let item = 'container_' + this.id;
-            $('#' + item).toggleClass("visible hidden");
             $('#' + aux_section).toggleClass("visible hidden");
+            $('#' + item).toggleClass("visible hidden");
             aux_section = item;
         })
     });
