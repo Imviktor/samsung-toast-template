@@ -1,0 +1,167 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+
+        /* Some CSS reset */
+        * {
+            box-sizing: border-box;
+        }
+
+        /* Base styles to make it look a bit more like table */
+        .headings,
+        .row {
+            border: 1px solid #ddd;
+        }
+
+        .row {
+            margin-top: 8px;
+            padding: 8px;
+        }
+
+        /* Table styles on default aka Small screen */
+        .headings {
+            display: none;
+        }
+
+        .cell {
+            text-align: right;
+        }
+
+        .cell:before {
+            content: attr(data-label);
+            float: left;
+        }
+
+        /* Table styles on Medium and Large screen  */
+        @media (min-width: 768px) {
+            .container {
+                overflow-x: scroll;
+                overflow-y: hidden;
+            }
+
+            .headings {
+                display: block;
+            }
+
+            .headings:before,
+            .headings:after,
+            .row:before,
+            .row:after {
+                content: " ";
+                display: table;
+            }
+
+            .row-container {
+                padding-left: 160px;
+                overflow: hidden;
+                width: 1170px;
+            }
+
+            .cell {
+                float: left;
+                padding: 0 8px;
+                text-align: left;
+                width: 9.0909090909%;
+            }
+
+            .cell:before {
+                display: none;
+            }
+
+            .cell.fixed {
+                background-color: white;
+                display: block;
+                margin-left: -160px;
+                position: absolute;
+                text-align: left;
+            }
+
+            .cell.wider {
+                width: 160px;
+            }
+
+            .row {
+                border-top: none;
+                margin-top: 0;
+                padding: 4px 0;
+                width: 1170px;
+            }
+        }
+        view rawresponsive-tables.css hosted with ❤ by GitHub
+    </style>
+</head>
+
+<body>
+<div class="container">
+    <div class="row-container headings">
+        <div class="cell wider fixed"><br><br></div>
+        <div class="cell">Loans originated</div>
+        <div class="cell">Principal repaid</div>
+        <div class="cell">Loans outstanding</div>
+        <div class="cell">Current</div>
+        <div class="cell">1-15 days late</div>
+        <div class="cell">16-30 days late</div>
+        <div class="cell">31-60 days late</div>
+        <div class="cell">60+ days late</div>
+        <div class="cell">Default</div>
+        <div class="cell">Bad Debt</div>
+        <div class="cell">Average NAR%</div>
+    </div>
+    <div class="m-statistics-body">
+        <div class="row">
+            <div class="row-container">
+                <div data-label="Type" class="cell wider fixed">Secured Car Loan</div>
+                <div data-label="Loans originated" class="cell">€59,719,984</div>
+                <div data-label="Principal repaid" class="cell">€44,648,384</div>
+                <div data-label="Loans outstanding" class="cell">€15,071,599</div>
+                <div data-label="Current" class="cell">€13,436,597</div>
+                <div data-label="1-15 days late" class="cell">€470,218</div>
+                <div data-label="16-30 days late" class="cell">€534,502</div>
+                <div data-label="31-60 days late" class="cell">€629,368</div>
+                <div data-label="60+ days late" class="cell">-</div>
+                <div data-label="Default" class="cell">-</div>
+                <div data-label="Bad Debt" class="cell">-</div>
+                <div data-label="Average NAR%" class="cell">12.1%</div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="row-container">
+                <div data-label="Type" class="cell wider fixed">Mortgage Loan</div>
+                <div data-label="Loans originated" class="cell">€4,529,875</div>
+                <div data-label="Principal repaid" class="cell">€3,768,786</div>
+                <div data-label="Loans outstanding" class="cell">€761,089</div>
+                <div data-label="Current" class="cell">€725,307</div>
+                <div data-label="1-15 days late" class="cell">-</div>
+                <div data-label="16-30 days late" class="cell">€3,207</div>
+                <div data-label="31-60 days late" class="cell">€13,417</div>
+                <div data-label="60+ days late" class="cell">€11,251</div>
+                <div data-label="Default" class="cell">€7,906</div>
+                <div data-label="Bad Debt" class="cell">-</div>
+                <div data-label="Average NAR%" class="cell">13.4%</div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="row-container">
+                <div data-label="Type" class="cell wider fixed">Invoice Financing</div>
+                <div data-label="Loans originated" class="cell">€5,787,531</div>
+                <div data-label="Principal repaid" class="cell">€3,153,405</div>
+                <div data-label="Loans outstanding" class="cell">€2,634,126</div>
+                <div data-label="Current" class="cell">€2,067,779</div>
+                <div data-label="1-15 days late" class="cell">€132,681</div>
+                <div data-label="16-30 days late" class="cell">€76,906</div>
+                <div data-label="31-60 days late" class="cell">€165,171</div>
+                <div data-label="60+ days late" class="cell">€163,606</div>
+                <div data-label="Default" class="cell">€27,981</div>
+                <div data-label="Bad Debt" class="cell">-</div>
+                <div data-label="Average NAR%" class="cell">11.1%</div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+
+</html>
+view rawresponsive-tables.html hosted with ❤ by GitHub

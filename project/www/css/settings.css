@@ -1,12 +1,10 @@
 .settings_options {
-    border: 2px solid #1b792c;
     display: flex;
     flex-flow: column;
     justify-content: space-between;
 }
 
 .settings_container {
-    border: 2px solid #269abc;
 }
 
 .settings_list {
@@ -18,6 +16,7 @@
 
 .option{
     font-size: 1.5vmax;
+    cursor: pointer;
 }
 
 .hidden{

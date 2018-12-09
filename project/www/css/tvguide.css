@@ -1,0 +1,32 @@
+.scheduler {
+    overflow: auto;
+    white-space: nowrap;
+}
+
+.time {
+}
+
+.channels {
+}
+
+.channel_header {
+}
+
+.channel_list {
+}
+table {
+    display: table-cell;
+    border-spacing: 0;
+}
+table, td, th {
+    border: 1px solid #0c84f8;
+}
+
+th,td{
+    min-width: 300px;
+}
+
+th{
+    text-align: left;
+    font-size: 1.5vmax;
+}
