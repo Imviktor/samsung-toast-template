@@ -24,16 +24,16 @@ var app = {
      * Deviceready Even Handler.
      */
     onDeviceReady: function() {
-        // toast.inputdevice.getSupportedKeys(function(keys){
-        //     for(var i = 0; i < keys.length; i++)
-        //     {
-        //         switch(keys[i].name) {
-        //             case 'ArrowUp':
-        //                 tvKey.KEY_UP = keys[i].code;
-        //                 break;
-        //         }
-        //     }
-        // });
+        toast.inputdevice.getSupportedKeys(function(keys){
+            for(var i = 0; i < keys.length; i++)
+            {
+                switch(keys[i].name) {
+                    case 'ArrowUp':
+                        tvKey.KEY_UP = keys[i].code;
+                        break;
+                }
+            }
+        });
         this.initGame();
     },
     initGame: function() {

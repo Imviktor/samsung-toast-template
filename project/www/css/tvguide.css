@@ -14,19 +14,53 @@
 
 .channel_list {
 }
-table {
-    display: table-cell;
-    border-spacing: 0;
+
+main{
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-start;
 }
-table, td, th {
-    border: 1px solid #0c84f8;
+.fixed{
+    position: fixed;
 }
 
-th,td{
+#channel_header{
+    overflow-x: hidden;
+}
+
+.program {
+    display: flex;
+    flex-flow: row nowrap;
+    white-space: nowrap;
+}
+
+.cell{
     min-width: 300px;
+    height: 30px;
+    border: 1px solid #f1ffff;
 }
 
-th{
-    text-align: left;
-    font-size: 1.5vmax;
+.top.left{
+    width: 300px;
+    height: 30px;
+}
+
+#channel_header{
+    flex: 1 1 auto;
+    display: flex;
+    overflow-x: hidden;
+    width: calc(100% - 300px);
+    height: 30px;
+}
+
+#channel_list{
+    overflow-y: hidden;
+    width: 300px;
+    height: calc(100% - 30px);
+}
+
+#channel_programming{
+    overflow: scroll;
+    width: calc(100% - 300px);
+    height: calc(100% - 30px);
 }

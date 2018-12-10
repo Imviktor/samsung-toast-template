@@ -27,10 +27,11 @@
     <span id="time_section" class="section_text">05/12/2018 15:46</span>
 </header>
 <main class="body scroll-container">
-    <div>
-    <table  id="channels" class="scheduler">
-
-    </table></div>
+    <div class="top left"><span>CHANNELS</span></div>
+    <div id="channel_header"></div>
+    <div id="channel_list"></div>
+    <div id="channel_programming"></div>
+    <!--<table  id="channels" class="scheduler"></table>-->
 </main>
 <script>
     $(function () {
@@ -41,29 +42,54 @@
         $("#channels").append("<tr id='channel_header'></tr>")
         let scheduler = $("#channel_header");
         let times = ["00", "30"];
-        scheduler.append("<th>CHANNELS</th>");
-        scheduler.append("<th>NOW</th>");
+        scheduler.append("<span class='cell'>NOW</span>");
         let d = new Date();
         let h = d.getHours();
         let m = d.getMinutes();
         if (m > 30)
             h = h + 1;
-        for (let i = h; i < 23 + h; i++) {
+        for (let i = h; i < 24 + h; i++) {
             for (let j = 0; j < times.length; j++) {
                 if (i === h && m < 30)
                     j++;
-                let id = pad2(i) + times[j];
-                scheduler.append("<th>" + pad2(i % 23) + ":" + times[j] + "</th>")
+                scheduler.append("<span class='cell'>" + pad2(i % 23) + ":" + times[j] + "</span>")
             }
         }
-        let channel = $("#channels");
-        for (let i = 0; i < 50; i++) {
-            channel.append("<tr id='aqui1" + i + "'></tr>");
-            $("#aqui1" + i).append("<td>CHANNEL " + i + "</td>")
+        let channelList = $("#channel_list");
+        let channelProgramming = $("#channel_programming");
+
+        for (let i = 0; i < 100; i++) {
+            channelList.append("<div class='cell'>CHANNEL " + i + "</div>");
+            channelProgramming.append("<div class='program' id='aqui1" + i + "'></div>");
             for (let j = 0; j < 48; j++)
-                $("#aqui1" + i).append("<td>program " + j + "</td>")
+                $("#aqui1" + i).append("<div class='cell'>program " + j + "</div>")
         }
-    })
+        var scrollTimerHandle = "";
+
+        $("#channel_programming").on('scroll', function () {
+            let newScrollPosition = this.scrollLeft = parseInt(this.scrollLeft / 300) * 300;
+            let _this = this;
+            clearInterval(scrollTimerHandle);
+
+            scrollTimerHandle  = setTimeout(function() {
+                _this.scrollLeft = newScrollPosition ;
+
+            }, 1000);
+            $("#channel_header").scrollLeft($(this).scrollLeft());
+        });
+
+        $("#channel_programming").on('scroll', function () {
+            let newScrollPosition = this.scrollTop = parseInt(this.scrollTop / 30) * 30;
+            let _this = this;
+            clearInterval(scrollTimerHandle);
+
+            scrollTimerHandle  = setTimeout(function() {
+                _this.scrollTop = newScrollPosition ;
+
+            }, 1000);
+            $("#channel_list").scrollTop($(this).scrollTop());
+        });
+    });
 </script>
 </body>
 </html>
